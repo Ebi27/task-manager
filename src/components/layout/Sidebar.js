@@ -1,19 +1,21 @@
 import React from "react";
 import {
   FaChevronDown,
-  FaClock,
+  FaInbox,
   FaRegCalendarAlt,
   FaRegCalendar,
 } from "react-icons/fa";
+
+
 
 export const Sidebar = () => (
   <div className="sidebar" data-testid="sidebar">
     <ul className="sidebar_generic">
       <li>
         <span>
-          <FaClock />
+          <FaInbox />
         </span>
-        All Updates
+        Inbox
       </li>
       <li>
         <span>
@@ -27,14 +29,21 @@ export const Sidebar = () => (
         </span>
         Next 7 days
       </li>
+      <li>
+        <span>
+          <FaRegCalendar />
+        </span>
+        Next Month
+      </li>
     </ul>
-
-    <div className= "sidebar_middle">
-        <span> <FaChevronDown /></span>
-        <h2>Projects</h2>
+    <div className="sidebar_middle">
+      <span>
+        {" "}
+        <FaChevronDown />
+      </span>
+      <h2>Projects</h2>
     </div>
-
     <ul className="sidebar_projects"> Projects will be here!</ul>
-    Add project Component here 
+    Add project Component here
   </div>
 );

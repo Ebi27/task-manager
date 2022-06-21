@@ -6,7 +6,7 @@ import { collatedTasksExist } from "../helpers";
 //Getting data from the database
 //This block of code is to get a particular task on each condition / pulling each new task
 
-export const useTasks = (selectedProject) => {
+export const useTasks = selectedProject => {
   // creating the hooks
   const [tasks, setTasks] = useState([]);
   const [archivedTasks, setArchivedTasks] = useState([]);
@@ -29,9 +29,11 @@ export const useTasks = (selectedProject) => {
         : selectedProject === "INBOX" || selectedProject === 0
         ? (unsubscribe = unsubscribe.where("date", "==", ""))
         : unsubscribe;
+
+
     unsubscribe = unsubscribe.onSnapshot((snapshot) => {
       // To extract data from an oject with different key values
-      const newTasks = snapshot.docs.map((task) => ({
+      const newTasks = snapshot.docs.map(task => ({
         id: task.id,
         ...task.data(),
       }));
@@ -40,7 +42,7 @@ export const useTasks = (selectedProject) => {
         // calling the hook to check for tasks that are due in the next 7 days
         selectedProject === "NEXT_7_DAYS"
           ? newTasks.filter(
-              (task) =>
+              task =>
                 moment(task.date, "DD-MM-YYYY").diff(moment(), "days") <= 7 &&
                 task.archived !== true
             )

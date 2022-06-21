@@ -1,25 +1,25 @@
 import React from "react";
 import { Checkbox } from "./Checkbox";
-
+import { useTasks } from "../hooks";
 
 export const Tasks = () => {
-    const tasks = [];
+    const  { tasks } = useTasks('1');  //to get the tasks 
+console.log(tasks);
 
-
-    let projectName = '';
+    const projectName = '';
 
     return (
         <div className = "tasks" data-testid='tasks'>
-<h12 data-testid="project-name">{projectName}</h12>
+<h2 data-testid="project-name">{projectName}</h2>
 
 <ul className="tasks__list">
     {tasks.map(task=> (
         <li key={`${task.id}`}>
-            <checkbox id = {task.id} />
+            <Checkbox id = {task.id} />
             <span>{task.task}</span>
     </li>
     ))}
 </ul>
         </div>
-    )
-}
+    );
+};
