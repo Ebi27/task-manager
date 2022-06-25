@@ -2,6 +2,7 @@
   "homepage": "https://Ebi27.github.io/task-manager",
   "name": "task-manager",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -11,16 +12,14 @@
     "firebase": "^9.6.5",
     "moment": "^2.24.0",
     "node_module": "^0.0.0",
-    "node-sass": "^7.0.1",
     "package": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "type": "module",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
