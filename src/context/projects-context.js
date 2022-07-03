@@ -4,7 +4,7 @@ import { useProjects } from '../hooks';
 //context provides where to pass data down react compononents without having to use props. We have a provider and a consumer 
 
 export const ProjectsContext = createContext(); 
-export const projectsProvider = ({children}) => {
+export const ProjectsProvider = ({children}) => {
     const { projects, setProjects } = useProjects(); 
 
     return (
@@ -14,6 +14,6 @@ export const projectsProvider = ({children}) => {
     );
 }; 
 
-export const useProjectsValue =() => useContext(projectsContext);
+export const useProjectsValue =() => useContext(ProjectsContext);
 
 
