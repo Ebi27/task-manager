@@ -2,26 +2,29 @@
   "homepage": "https://Ebi27.github.io/task-manager",
   "name": "task-manager",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/user-event": "^14.2.1",
     "all": "^0.0.0",
-    "firebase": "^9.6.5",
-    "moment": "^2.24.0",
+    "dev-server": "^0.2.0",
+    "firebase": "^9.8.4",
+    "moment": "^2.29.3",
     "node_module": "^0.0.0",
     "package": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "task-manager": "^1.7.0",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build ",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
     "test": "react-scripts test",
@@ -44,5 +47,17 @@
     "node-sass": "^7.0.1",
     "sass": "^1.53.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "description": "This app is the first app that i am creating to solve a particular problem. This project is one that hits close to home and one day, i will tell it's story. This app is a project manager through which you can time yourself while working on a task, create goals and daily tasks and track all of your activities.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebi27/Task-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebi27/Task-manager/issues"
+  }
 }
