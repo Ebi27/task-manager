@@ -1,8 +1,9 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import "firebase/auth";
 
-
-const firebaseConfig = firebase.initializeApp({
+const firebaseConfig = firebase.initializeApp( 
+{
   apiKey: "AIzaSyBkswOectyT95YzzmojEjMxpHQfGmW62Gk",
   authDomain: "task-manager-78024.firebaseapp.com",
   projectId: "task-manager-78024",
@@ -13,3 +14,4 @@ const firebaseConfig = firebase.initializeApp({
 });
 
 export { firebaseConfig as firebase }; 
+
