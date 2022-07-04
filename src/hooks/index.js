@@ -71,20 +71,20 @@ export const useTasks = selectedProject => {
 // const { tasks, archievedTasks } = useTasks(selectedProject);
 
 // To get projects once
-export const userProjects = () => {
+export const useProjects = () => {
   //Creating another hook
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     //methods inside to get things
     firebase
-      .firebase()
+      .firestore()
       .collection("projects")
       .where("userId", "==", "WPuIeddml90noRt2P94Z")
       .orderBy("projectId")
       .get()
-      .then((snapshot) => {
-        const allProjects = snapshot.docs.map((project) => ({
+      .then(snapshot => {
+        const allProjects = snapshot.docs.map(project => ({
           ...project.data(),
           docId: project.id, //We need this to delete items
         }));
