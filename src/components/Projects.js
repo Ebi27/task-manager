@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelectedProjectValue, useProjectsValue } from '../context';
+import { IndividualProject} from './IndividualProject'
 import PropTypes from 'prop-types';
 
 
