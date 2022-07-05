@@ -89,7 +89,7 @@ export const useProjects = () => {
           docId: project.id, //We need this to delete items
         }));
         // To avoid an infinite loop when project changes
-        if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
+        if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {   //stringify makes a string comparison to make sure of the changes 
           setProjects(allProjects);
         }
       });
