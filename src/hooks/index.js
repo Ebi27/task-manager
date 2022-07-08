@@ -83,13 +83,14 @@ export const useProjects = () => {
       .where("userId", "==", "WPuIeddml90noRt2P94Z")
       .orderBy("projectId")
       .get()
-      .then(snapshot => {
-        const allProjects = snapshot.docs.map(project => ({
+      .then((snapshot) => {
+        const allProjects = snapshot.docs.map((project) => ({
           ...project.data(),
           docId: project.id, //We need this to delete items
         }));
         // To avoid an infinite loop when project changes
-        if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {   //stringify makes a string comparison to make sure of the changes 
+        if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
+          //stringify makes a string comparison to make sure of the changes
           setProjects(allProjects);
         }
       });
