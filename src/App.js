@@ -12,6 +12,7 @@ import { ProjectsProvider, SelectedProjectProvider } from './context';
        <div className="App">
          <Header />
          <Content />
+      <Sidebar /> 
        </div>
      </ProjectsProvider>
    </SelectedProjectProvider>

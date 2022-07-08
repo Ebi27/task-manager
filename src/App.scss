@@ -259,7 +259,7 @@ header {
   background-color: #fafafa;
 
   @include mq("900px") {
-    display: none;
+     display: none;
   }
 
   li {
@@ -288,7 +288,7 @@ header {
 
     &-delete {
       margin-left: auto;
-      display: none;
+       display: none;
 
       svg {
         color: #cacaca;
