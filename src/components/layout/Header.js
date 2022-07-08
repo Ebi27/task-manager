@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPizzaSlice } from 'react-icons/fa';
-
+import PropTypes from 'prop-types';
 
 
 
@@ -15,8 +15,8 @@ return <header className="header" data-testid="header">
         </div>
         <div className="settings">
             <ul>
-                <li>+</li>
-                <li>
+                <li data-testid="quick-add-task-action" className="add_settings">+</li>
+                <li data-testid="dark-mode-setting"className="settings__darkmode"> 
                     <FaPizzaSlice />
                      </li>
             </ul>
