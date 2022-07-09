@@ -2,8 +2,10 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import "firebase/auth";
 
-const firebaseConfig = firebase.initializeApp(process.env.apiKey, 
+const firebaseConfig = firebase.initializeApp(
+  // process.env.apiKey, 
   {
+    apiKey: "AIzaSyBkswOectyT95YzzmojEjMxpHQfGmW62Gk",
   authDomain: "task-manager-78024.firebaseapp.com",
   projectId: "task-manager-78024",
   storageBucket: "task-manager-78024.appspot.com",
